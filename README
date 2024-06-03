@@ -1,0 +1,26 @@
+Backend desarrollado con Python Django y DjangoRest. Base de datos PostgreSQL. Desplegado en Render con ruta  https://backend-api-tareas.onrender.com/
+La aplicación cuenta con políticas CORS para bloquear peticiones que no provengan del localhost donde fue desarrollado y la url donde está alojado el frontend.
+
+GET
+https://backend-api-tareas.onrender.com/api/tareas/
+
+POST
+https://backend-api-tareas.onrender.com/api/tareas/
+
+DELETE
+https://backend-api-tareas.onrender.com/api/tareas/{id}/
+
+PUT
+https://backend-api-tareas.onrender.com/api/tareas/{id}/
+
+Para visitar el repositorio del backend ir a https://github.com/Cavserna/Backend_API_tareas
+
+
+
+
+Frontend desarrollado con Angular.JS, TypeScript y la libreria Tailwind CSS para el manejo de estilos.
+Soporta peticiones GET, POST y DELETE. 
+
+PAra visitar el repositorio del front ir a https://github.com/Cavserna/frontend-tareasAPP
+
+Para visitar el proyecto y ejecutarlo en la web ir a https://frontend-tareas-app.web.app
