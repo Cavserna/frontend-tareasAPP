@@ -1,0 +1,72 @@
+
+<div class="bg-slate-100 ">
+    <div class="flex flex-col justify-center  px-6 py-12 lg:px-8 ">
+        <div>
+          <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Agenda de Tareas</h2>
+        </div>
+        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm ">
+          <form class="space-y-6" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+            <div>
+              <label for="nombre" class="block text-sm font-medium leading-6 text-gray-900">Nombre de la tarea</label>
+              <div class="mt-2">
+                <input type="text" id="nombre" name="nombre" formControlName="nombre" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+      
+            <div>
+              <div class="flex items-center justify-between">
+                <label for="descripcion" class="block text-sm font-medium leading-6 text-gray-900">Descripción</label>
+              </div>
+              <div class="mt-2">
+                <input type="text" id="descripcion" name="descripcion" formControlName="descripcion"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+      
+            <div>
+              <button type="submit" class="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-500 ">Agregar</button>
+            </div>
+          </form>
+        </div>
+        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+            <ul>
+                <li *ngFor="let item of tareas">
+                    <h1 class="text-center font-bold">
+                        {{item.nombre}} 
+                    </h1>
+                    <div>
+                        {{item.descripcion}}  
+                    </div>
+                    <button (click)="onDelete(item)" class= "flex rounded-md bg-red-500 px-2 py-1 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-600">Eliminar</button>
+                </li>
+            </ul> 
+        </div>
+    </div>
+</div>
+
+
+
+    
+  
+<!-- Aqí comienza lo hecho por  mi -->
+<!-- <form (submit)="onSubmit(formulario.value)" #formulario="ngForm">
+    <div>
+        <label for="nombre">Tarea</label>
+        <input type="text" id="nombre" name="nombre" ngModel>
+    </div>
+    <div>
+        <label for="descripcion">Descripcion</label>
+        <input type="text" id="descripcion" name="descripcion"  ngModel >
+    </div>
+    <button type="submit">Enviar</button>
+
+</form>
+
+<ul>
+    <li *ngFor="let item of tareas">
+        {{item.nombre}}
+        {{item.descripcion}}
+        
+        <button (click)="onDelete(item)">Eliminar</button>
+    </li>
+</ul> -->
+
